@@ -32,7 +32,7 @@ const handleVolume = (e) => {
 };
 
 const showHideKeys = () => {
-  pianoKeys.forEach((key) => key.classList.toggle("hide"));
+  pianoKeys.forEach((key) => key.querySelectorAll("span").forEach((x) => x.classList.toggle("hide")));
 };
 
 volumeSlider.addEventListener("input", handleVolume);
